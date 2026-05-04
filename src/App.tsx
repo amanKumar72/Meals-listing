@@ -1,19 +1,20 @@
-import { Button } from "@/components/ui/button"
+import { MealsList } from "@/components/MealsList";
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="min-h-svh">
+      <header className="border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <div className="container mx-auto px-4 py-6">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Meals Directory</h1>
+            <p className="text-muted-foreground">Discover delicious recipes from around the world</p>
+          </div>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </header>
+      
+      <main className="container mx-auto px-4 py-8">
+        <MealsList />
+      </main>
     </div>
   )
 }
